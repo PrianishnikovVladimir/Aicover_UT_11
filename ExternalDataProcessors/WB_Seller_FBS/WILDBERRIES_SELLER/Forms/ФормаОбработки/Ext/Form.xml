@@ -1,0 +1,623 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.22">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаФормаРегламенты" id="33">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ФормаРегламенты</CommandName>
+				<ExtendedTooltip name="ФормаФормаРегламентыРасширеннаяПодсказка" id="34"/>
+			</Button>
+			<Button name="ФормаПоказатьСпрятатьЛогирование" id="63">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ПоказатьСпрятатьЛогирование</CommandName>
+				<ExtendedTooltip name="ФормаПоказатьСпрятатьЛогированиеРасширеннаяПодсказка" id="64"/>
+			</Button>
+			<Button name="ФормаТЕСТ" id="97">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ТЕСТ</CommandName>
+				<ExtendedTooltip name="ФормаТЕСТРасширеннаяПодсказка" id="98"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Кабинет" id="30">
+			<DataPath>Кабинет</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<ContextMenu name="КабинетКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="КабинетРасширеннаяПодсказка" id="32"/>
+			<Events>
+				<Event name="OnChange">КабинетПриИзменении</Event>
+				<Event name="Clearing">КабинетОчистка</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаСтраницыЛогирование" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы логирование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы логирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСтраницыЛогированиеРасширеннаяПодсказка" id="60"/>
+			<ChildItems>
+				<Pages name="Страницы" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="2"/>
+					<ChildItems>
+						<Page name="СтраницаОстатки" id="3">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Остатки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Остатки для передачи на маркетплейс</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+							<Group>Vertical</Group>
+							<ScrollOnCompress>false</ScrollOnCompress>
+							<ExtendedTooltip name="СтраницаОстаткиРасширеннаяПодсказка" id="4"/>
+							<ChildItems>
+								<Table name="ТаблицаОстатков" id="5">
+									<Representation>List</Representation>
+									<RowSelectionMode>Cell</RowSelectionMode>
+									<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ТаблицаОстатков</DataPath>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+									</CommandSet>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТаблицаОстатковКонтекстноеМеню" id="6"/>
+									<AutoCommandBar name="ТаблицаОстатковКоманднаяПанель" id="7">
+										<ChildItems>
+											<ButtonGroup name="ТаблицаОстатковГруппаВыбратьСнятьВсе" id="50">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Таблица остатков группа выбрать снять все</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Таблица остатков группа выбрать снять все</v8:content>
+													</v8:item>
+												</ToolTip>
+												<Representation>Compact</Representation>
+												<ExtendedTooltip name="ТаблицаОстатковГруппаВыбратьСнятьВсеРасширеннаяПодсказка" id="51"/>
+												<ChildItems>
+													<Button name="ТаблицаОстатковОстатки_ВыбратьВсе" id="52">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.Остатки_ВыбратьВсе</CommandName>
+														<ExtendedTooltip name="ТаблицаОстатковОстатки_ВыбратьВсеРасширеннаяПодсказка" id="53"/>
+													</Button>
+													<Button name="ТаблицаОстатковОстатки_СнятьВсе" id="54">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.Остатки_СнятьВсе</CommandName>
+														<ExtendedTooltip name="ТаблицаОстатковОстатки_СнятьВсеРасширеннаяПодсказка" id="55"/>
+													</Button>
+												</ChildItems>
+											</ButtonGroup>
+											<ButtonGroup name="ТаблицаОстатковГруппаКнопокВыгрузитьЗагрузитьОстатки" id="48">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Таблица остатков группа кнопок выгрузить загрузить остатки</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Таблица остатков группа кнопок выгрузить загрузить остатки</v8:content>
+													</v8:item>
+												</ToolTip>
+												<Representation>Compact</Representation>
+												<ExtendedTooltip name="ТаблицаОстатковГруппаКнопокВыгрузитьЗагрузитьОстаткиРасширеннаяПодсказка" id="49"/>
+												<ChildItems>
+													<Button name="Остатки_Заполнить" id="37">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.Остатки_Заполнить</CommandName>
+														<ExtendedTooltip name="Остатки_ЗаполнитьРасширеннаяПодсказка" id="38"/>
+													</Button>
+													<Button name="Остатки_Отправить" id="35">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.Остатки_Отправить</CommandName>
+														<ExtendedTooltip name="Остатки_ОтправитьРасширеннаяПодсказка" id="36"/>
+													</Button>
+												</ChildItems>
+											</ButtonGroup>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТаблицаОстатковРасширеннаяПодсказка" id="8"/>
+									<SearchStringAddition name="ТаблицаОстатковСтрокаПоиска" id="9">
+										<AdditionSource>
+											<Item>ТаблицаОстатков</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаОстатковСтрокаПоискаКонтекстноеМеню" id="10"/>
+										<ExtendedTooltip name="ТаблицаОстатковСтрокаПоискаРасширеннаяПодсказка" id="11"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТаблицаОстатковСостояниеПросмотра" id="12">
+										<AdditionSource>
+											<Item>ТаблицаОстатков</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаОстатковСостояниеПросмотраКонтекстноеМеню" id="13"/>
+										<ExtendedTooltip name="ТаблицаОстатковСостояниеПросмотраРасширеннаяПодсказка" id="14"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТаблицаОстатковУправлениеПоиском" id="15">
+										<AdditionSource>
+											<Item>ТаблицаОстатков</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаОстатковУправлениеПоискомКонтекстноеМеню" id="16"/>
+										<ExtendedTooltip name="ТаблицаОстатковУправлениеПоискомРасширеннаяПодсказка" id="17"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<CheckBoxField name="ТаблицаОстатковВыбратьСтроку" id="45">
+											<DataPath>ТаблицаОстатков.ВыбратьСтроку</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.ЗеленаяГалкаСредняя</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<AutoEditMode>true</AutoEditMode>
+											<ContextMenu name="ТаблицаОстатковВыбратьСтрокуКонтекстноеМеню" id="46"/>
+											<ExtendedTooltip name="ТаблицаОстатковВыбратьСтрокуРасширеннаяПодсказка" id="47"/>
+										</CheckBoxField>
+										<InputField name="ТаблицаОстатковНоменклатура" id="83">
+											<DataPath>ТаблицаОстатков.Номенклатура</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТаблицаОстатковНоменклатураКонтекстноеМеню" id="84"/>
+											<ExtendedTooltip name="ТаблицаОстатковНоменклатураРасширеннаяПодсказка" id="85"/>
+										</InputField>
+										<InputField name="ТаблицаОстатковШтрихкод" id="89">
+											<DataPath>ТаблицаОстатков.ИдентификаторХарактеристикиМП</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТаблицаОстатковШтрихкодКонтекстноеМеню" id="90"/>
+											<ExtendedTooltip name="ТаблицаОстатковШтрихкодРасширеннаяПодсказка" id="91"/>
+										</InputField>
+										<InputField name="ТаблицаОстатковГабаритность" id="86">
+											<DataPath>ТаблицаОстатков.Габаритность</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТаблицаОстатковГабаритностьКонтекстноеМеню" id="87"/>
+											<ExtendedTooltip name="ТаблицаОстатковГабаритностьРасширеннаяПодсказка" id="88"/>
+										</InputField>
+										<InputField name="ТаблицаОстатковСклад" id="92">
+											<DataPath>ТаблицаОстатков.Склад</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТаблицаОстатковСкладКонтекстноеМеню" id="93"/>
+											<ExtendedTooltip name="ТаблицаОстатковСкладРасширеннаяПодсказка" id="94"/>
+										</InputField>
+										<InputField name="ТаблицаОстатковИдентификаторСклада" id="77">
+											<DataPath>ТаблицаОстатков.ИдентификаторСклада</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ТаблицаОстатковИдентификаторСкладаКонтекстноеМеню" id="78"/>
+											<ExtendedTooltip name="ТаблицаОстатковИдентификаторСкладаРасширеннаяПодсказка" id="79"/>
+										</InputField>
+										<InputField name="ТаблицаОстатковКоличествоНаМаркетплейсе" id="68">
+											<DataPath>ТаблицаОстатков.КоличествоНаМаркетплейсе</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧН=0</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧН=0</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ТаблицаОстатковКоличествоНаМаркетплейсеКонтекстноеМеню" id="69"/>
+											<ExtendedTooltip name="ТаблицаОстатковКоличествоНаМаркетплейсеРасширеннаяПодсказка" id="70"/>
+										</InputField>
+										<InputField name="ТаблицаОстатковСвободныйОстаток" id="65">
+											<DataPath>ТаблицаОстатков.СвободныйОстаток</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧН=0</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧН=0</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ТаблицаОстатковСвободныйОстатокКонтекстноеМеню" id="66"/>
+											<ExtendedTooltip name="ТаблицаОстатковСвободныйОстатокРасширеннаяПодсказка" id="67"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+				<UsualGroup name="ГруппаЛогирование" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Логирование</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа логирование</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Collapsed>true</Collapsed>
+					<ControlRepresentation>Button</ControlRepresentation>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="ГруппаЛогированиеРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<TextDocumentField name="Логирование" id="56">
+							<DataPath>Логирование</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ЛогированиеКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ЛогированиеРасширеннаяПодсказка" id="58"/>
+						</TextDocumentField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.WILDBERRIES_SELLER</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТаблицаОстатков" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица остатков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номенклатура" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СвободныйОстаток" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свободный остаток</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоличествоНаМаркетплейсе" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество на маркетплейсе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВыбратьСтроку" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрать строку</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторСклада" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор склада</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Габаритность" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Габаритность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.Габариты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторХарактеристикиМП" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор характеристики МП</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Склад" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Кабинет" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кабинет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КабинетыМаркетплейсов</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ИмяОбработки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Логирование" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логирование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ФормаРегламенты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма регламенты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма регламенты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыполнитьРегламентноеЗаданиеВручную</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ФормаРегламенты</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Остатки_Заполнить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить таблицу с товарами по остаткам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ТоварыЗагрузить</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаОстатки</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Остатки_Отправить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить отстатки на маркетплейс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ТоварыВыгрузить</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаОстатки</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Остатки_ВыбратьВсе" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки выбрать все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить выбор всех строк таблицы остатков</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Остатки_ВыбратьВсе</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="Остатки_СнятьВсе" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки снять все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять выбор со всех строк таблицы остатков</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Остатки_СнятьВсе</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ПоказатьСпрятатьЛогирование" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать спрятать логирование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать спрятать логирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьСпрятатьЛогирование</Action>
+		</Command>
+		<Command name="ТЕСТ" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТЕСТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТЕСТ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТЕСТ</Action>
+		</Command>
+	</Commands>
+</Form>
